@@ -1,0 +1,101 @@
+/* Pixel-art themed dark UI for FlashQuest
+   Main colors: dark grey background, purple trims
+   Font: Press Start 2P for retro pixel look
+*/
+:root{
+  --bg:#121216; /* slightly lighter very dark grey */
+  --panel:#151318; /* slightly lighter */
+  --accent:#8b4bd8; /* purple trim (richer) */
+  --accent-2:#6b2fb0;
+  --muted:#9b9b9b;
+  --text:#eaeaea;
+  --panel-edge: #0b0b0c;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);font-family:'Press Start 2P',monospace;color:var(--text);}
+
+.app-header{display:flex;align-items:center;gap:12px;padding:18px 20px;border-bottom:4px solid var(--panel-edge);}
+.logo{font-size:20px;color:var(--accent)}
+.version{color:var(--muted);font-size:10px}
+
+.header-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+
+/* Profile icon button (single square icon) */
+.icon-btn{width:38px;height:38px;border-radius:6px;border:3px solid var(--panel-edge);background:linear-gradient(180deg,var(--panel),#0b0b0c);color:var(--accent);font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px}
+.icon-btn:hover{filter:brightness(1.05)}
+
+/* Dropdown panel for profiles */
+.dropdown{position:absolute;right:20px;top:68px;width:300px;z-index:30;display:none}
+.dropdown[aria-hidden="false"]{display:block}
+.dropdown .panel{border-radius:6px}
+
+.app-shell{display:flex;gap:18px;padding:18px}
+.app-shell.centered{justify-content:center}
+.sidebar{width:260px}
+.maincol{flex:1;min-width:360px;max-width:900px}
+
+.panel{background:linear-gradient(180deg,var(--panel),#111);padding:14px;border:3px solid var(--panel-edge);box-shadow:inset 0 0 0 2px rgba(0,0,0,0.4);border-radius:6px}
+
+h3{margin:0 0 8px 0;font-size:12px;color:var(--accent)}
+
+.row{display:flex;align-items:center;gap:8px}
+.row.small{gap:16px;font-size:11px}
+.gap{gap:6px}
+
+input[type="text"], input[type="file"], select{background:#0e0e0f;border:2px solid #0b0b0c;padding:8px;color:var(--text);font-size:10px;border-radius:4px;width:100%;outline:none}
+
+.listwrap{border:2px dashed rgba(120,80,140,0.08);padding:6px;border-radius:4px;margin-bottom:8px}
+select{height:120px}
+
+.btn{background:linear-gradient(180deg,var(--accent),var(--accent-2));color:#fff;border:none;padding:8px 10px;font-size:11px;border-radius:4px;cursor:pointer;box-shadow:0 2px 0 rgba(0,0,0,0.5)}
+.btn:hover{filter:brightness(1.05)}
+.btn.danger{background:linear-gradient(180deg,#7b2b5b,#5a1b4a)}
+.btn.primary{background:linear-gradient(180deg,#8a4bd0,#6d2fb0)}
+
+.profiles .panel{padding:10px}
+.profiles input{font-size:11px}
+.profiles .import{margin-top:8px}
+
+.player-header{display:flex;justify-content:space-between;align-items:center}
+.player-name{font-size:14px;color:var(--accent)}
+.player-meta{font-size:10px;color:var(--muted)}
+.hp{margin-top:8px;font-size:11px;display:flex;align-items:center;gap:8px}
+
+/* Hearts (HP) - small pixel hearts rendered with CSS gradients */
+.hearts{display:flex;gap:6px;align-items:center}
+.hearts .heart{width:18px;height:16px;display:inline-block;position:relative}
+.hearts .heart::before{content:'';position:absolute;left:0;top:0;width:18px;height:16px;background:linear-gradient(180deg,#ff6b6b,#b12b2b);clip-path:polygon(50% 100%, 0% 50%, 12% 18%, 38% 20%, 50% 36%, 62% 20%, 88% 18%, 100% 50%);} 
+.hearts .heart.off::before{background:linear-gradient(180deg,#2b2b2b,#141414)}
+
+.question-area{min-height:120px;padding:8px;margin:8px 0;background:linear-gradient(180deg,#0c0c0d,#101013);border:2px solid rgba(120,80,140,0.06);border-radius:4px}
+
+/* Question card specifics */
+.question-box{padding:10px;border:2px solid rgba(120,80,140,0.04);border-radius:4px;background:linear-gradient(180deg,#0b0b0c,#0f0f11)}
+.question-text{font-size:12px;color:var(--text)}
+.answer-text{margin-left:6px;padding:6px 8px;background:rgba(255,255,255,0.02);border-radius:4px;border:1px solid rgba(255,255,255,0.03);font-size:11px;color:var(--muted)}
+
+/* Reveal button is less prominent than primary actions */
+.btn.reveal, #revealBtn{background:linear-gradient(180deg,#4b4b4b,#353535);color:#fff}
+
+/* Make UI feel chonky like pixel art (prevent subpixel blur) */
+*{image-rendering:pixelated}
+
+/* Responsive tweaks */
+@media (max-width:800px){
+  .sidebar{display:none}
+  .app-shell{padding:12px}
+}
+
+/* Make the header area draggable for frameless window */
+#dragHeader{ -webkit-app-region: drag; }
+
+/* Window control buttons: exclude from drag and style */
+.window-controls{display:flex;gap:6px;margin-right:8px}
+.win-control{ -webkit-app-region: no-drag; background:transparent;border:none;color:var(--muted);width:30px;height:26px;border-radius:4px;cursor:pointer}
+.win-control:hover{background:rgba(255,255,255,0.03);color:var(--text)}
+.win-control.close{color:#ff6b6b}
+.win-control.close:hover{background:rgba(255,100,100,0.08)}
+
+/* Ensure header buttons and profile icon are not draggable (so they can be clicked) */
+.header-right, .header-right *{ -webkit-app-region: no-drag }

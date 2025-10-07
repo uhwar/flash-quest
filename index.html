@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
+    <title>FlashQuest (Electron)</title>
+    <!-- Pixel/retro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <header class="app-header" id="dragHeader">
+      <div class="logo">FlashQuest</div>
+      <div class="header-right">
+        <div class="window-controls">
+          <button class="win-control" id="minBtn" title="Minimize">—</button>
+          <button class="win-control" id="maxBtn" title="Maximize">▢</button>
+          <button class="win-control close" id="closeBtn" title="Close">✕</button>
+        </div>
+        <button id="profileToggle" class="icon-btn" title="Profiles" aria-haspopup="true" aria-expanded="false">
+          <!-- small pixel-avatar SVG (32x32) -->
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="image-rendering:pixelated">
+            <rect width="32" height="32" fill="#0f0f11"/>
+            <!-- simple pixel face with purple trim -->
+            <rect x="6" y="5" width="20" height="22" fill="#1b1b1b" stroke="#7b3b9b" stroke-width="2"/>
+            <rect x="11" y="11" width="2" height="2" fill="#eaeaea"/>
+            <rect x="19" y="11" width="2" height="2" fill="#eaeaea"/>
+            <rect x="13" y="17" width="6" height="2" fill="#7b3b9b"/>
+          </svg>
+        </button>
+        <div class="version">v0.1</div>
+  </div>
+
+      <!-- Profile dropdown (hidden by default) -->
+      <div id="profileDropdown" class="dropdown" aria-hidden="true">
+        <section class="panel profiles" id="profilesPanel">
+          <h3>Profiles</h3>
+          <div class="row">
+            <input id="newProfileName" placeholder="New profile name" />
+            <button class="btn" id="createProfile">Create</button>
+          </div>
+          <div class="listwrap">
+            <select id="profilesList" size="6"></select>
+          </div>
+          <div class="row gap">
+            <button class="btn" id="loadProfile">Load</button>
+            <button class="btn danger" id="deleteProfile">Delete</button>
+            <button class="btn" id="reloadProfiles">Reload</button>
+          </div>
+          <div class="import">
+            <label for="importProfileFile">Import:</label>
+            <input type="file" id="importProfileFile" accept="application/json" />
+            <button class="btn" id="importProfileBtn">Import</button>
+          </div>
+        </section>
+      </div>
+
+    </header>
+
+    <div class="app-shell centered">
+      <main class="maincol">
+        <section class="panel player" id="playerPanel">
+          <div class="player-header">
+            <div class="player-name"><span id="playerName">Guest</span></div>
+            <div class="player-meta">Level <strong id="playerLevel">1</strong> · XP <strong id="playerXp">0</strong></div>
+          </div>
+          <div class="hp">HP: <span id="playerHp">3</span>/<span id="playerMaxHp">3</span>
+            <div id="hpHearts" class="hearts"></div>
+          </div>
+        </section>
+
+        <section class="panel quest" id="questPanel">
+          <h3>Quest</h3>
+          <div class="row small">
+            <div>Questions: <span id="questCount">0</span></div>
+            <div>Progress: <span id="questProgress">0%</span></div>
+          </div>
+          <div id="questionArea" class="question-area"></div>
+          <div class="row">
+            <button class="btn primary" id="startQuest">Start Quest</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "flash-quest-electron",
+  "version": "0.1.0",
+  "description": "Electron port of FlashQuest (minimal playable port)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "prepackage": "node ./scripts/generate-icon.js",
+    "package": "electron-packager . FlashQuest --platform=win32 --arch=x64 --out=./dist --icon=./icon/app.ico --overwrite --asar=false"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-packager": "^17.1.0",
+    "png-to-ico": "^1.0.0",
+    "jimp": "^0.16.1"
+  },
+  "author": "ported-from-flash-quest-alpha",
+  "license": "MIT"
+}

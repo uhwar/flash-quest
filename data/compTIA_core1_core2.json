@@ -1,0 +1,24 @@
+{
+  "flashcards": [
+    { "id": "fc1", "question": "Which connector is commonly used for analog VGA video?", "answer": "VGA (15-pin D-sub)", "category": "Cables & Connectors", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc2", "question": "An RJ-45 connector is typically used with which cable category?", "answer": "Twisted-pair (Ethernet)", "category": "Networking", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc3", "question": "USB-C is reversible (can be plugged in either way). True or False?", "answer": "True", "category": "Peripherals", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc4", "question": "Which cable is least susceptible to electromagnetic interference (EMI)?", "answer": "Fiber optic", "category": "Cables & Connectors", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc5", "question": "Which connector provides both digital audio and video in one cable for consumer electronics?", "answer": "HDMI", "category": "Audio/Video", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc6", "question": "Which connector is most commonly used for cable television (coax)?", "answer": "F-Type", "category": "Cables & Connectors", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc7", "question": "What is the typical pin count of a SATA data connector?", "answer": "7 pins", "category": "Storage", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc8", "question": "Which connector is commonly found on modern Wi-Fi cards for attaching external antennas?", "answer": "SMA / RP-SMA", "category": "Networking", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc9", "question": "Which connector is used for digital optical audio?", "answer": "TOSLINK", "category": "Audio/Video", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc10", "question": "Which cable would you choose for long-distance, high-speed backbone between switches?", "answer": "Single-mode fiber", "category": "Networking", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc11", "question": "Which connector is commonly used for legacy serial RS-232 connections?", "answer": "DB-9 (DE-9)", "category": "Peripherals", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc12", "question": "Which cable jacket rating would you pick to run between floors (vertical riser)?", "answer": "CMR (riser)", "category": "Cables & Connectors", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc13", "question": "Which connector transfers analog stereo audio using two separate channels (left/right) on consumer equipment?", "answer": "RCA pair", "category": "Audio/Video", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc14", "question": "Which cable provides the smallest, highest-density fiber connector commonly used in data centers?", "answer": "LC", "category": "Cables & Connectors", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc15", "question": "On motherboard power connectors, which connector provides power to the CPU?", "answer": "EPS/CPU 4+4-pin", "category": "Power", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc16", "question": "Which connector often uses a locking screw to secure the cable to a device (commonly used for professional video)?", "answer": "BNC", "category": "Cables & Connectors", "difficulty": "MEDIUM", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc17", "question": "Which connector transmits both video and HDCP-protected content and is commonly used for Blu-ray players and modern set-top boxes?", "answer": "HDMI", "category": "Audio/Video", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc18", "question": "S/PDIF can be carried over either optical (TOSLINK) or coaxial (RCA) connectors. True or False?", "answer": "True", "category": "Audio/Video", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc19", "question": "Which cable is best for short-distance, high-bandwidth server interconnects inside racks?", "answer": "Twinax (direct-attach copper)", "category": "Networking", "difficulty": "HARD", "timesAsked": 0, "timesCorrect": 0 },
+    { "id": "fc20", "question": "Which connector is typically used for a monitor that requires an analog signal?", "answer": "VGA", "category": "Audio/Video", "difficulty": "EASY", "timesAsked": 0, "timesCorrect": 0 }
+  ]
+}
